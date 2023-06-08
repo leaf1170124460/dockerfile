@@ -1,2 +1,2 @@
-# if-docker
-dockerfile of DeepFloyd IF
+# Dockerfile
+- Dockerfile of DeepFloyd IF
