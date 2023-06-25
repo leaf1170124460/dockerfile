@@ -9,7 +9,7 @@ FROM <YOUR BASE IMAGE>
 RUN pip config set global.index-url <YOUR PIP MIRROR URL>
 
 ```
-- 📁 Step 2: Move model weights to `.cache`  
+- 📁 Step 2: Move model weights to `checkpoint`  
 move downloaded weights to `checkpoint` in current `sam` folder  
 the tree of directory after moving is like:
 ```plaintext
