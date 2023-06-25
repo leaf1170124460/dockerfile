@@ -10,20 +10,21 @@ RUN pip config set global.index-url <YOUR PIP MIRROR URL>
 
 ```
 - 📁 Step 2: Move model weights to `.cache`  
-move `IF_` and `clip` folder from your `.cache` (`~/.cache`) to `.cache` in current `if` folder  
+move downloaded weights to `checkpoint` in current `sam` folder  
 the tree of directory after moving is like:
 ```plaintext
-├── .cache
-│   ├── clip
-│   └── IF_
+├── checkpoint
+│   ├── sam_vit_b_01ec64.pth
+│   ├── sam_vit_h_4b8939.pth
+│   └── sam_vit_l_0b3195.pth
 ```
 
 - 🏗️ Step 3: Build docker image  
 ```shell
-docker build -t if:v0.1 . --network host
+docker build -t sam:v0.1 . --network host
 ```
 
 - 🚀 Step 4: Run  
 ```shell
-docker run -t -i --net host --gpus all if:v0.1 /bin/bash
+docker run -t -i --net host --gpus all sam:v0.1 /bin/bash 
 ```
