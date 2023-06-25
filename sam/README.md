@@ -1,4 +1,4 @@
-# Dockerfile of DeepFloyd IF
+# Dockerfile of Segment Anything
 
 - 📝 Step 1: Modify base image and pip mirror url in `Dockerfile`
 ```dockerfile
